@@ -5,19 +5,17 @@ import { Button, Nav } from 'react-bootstrap';
 import { Container } from 'react-bootstrap';
 import { Navbar } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
    <Navbar bg="dark" variant='dark' expand="lg">
         <Container fluid>
-            {/* <Navbar.Brand to="/" style={{"color":"gold"}}>
-                <FontAwesomeIcon icon={faVideoSlash}/> Gold
-            </Navbar.Brand> */}
-            <Link to="/">
-                <Navbar.Brand style={{ color: "gold" }}>
+            {/* <Link to="/"> */}
+                <Navbar.Brand as={Link} to="/" style={{ color: "gold" }}>
                     <FontAwesomeIcon icon={faVideoSlash} /> Gold
                 </Navbar.Brand>
-            </Link>
+            {/* </Link> */}
             <Navbar.Toggle aria-controls='navbarScroll'/>
             <Navbar.Collapse id="navbarScroll">
                 <Nav
